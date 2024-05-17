@@ -1,0 +1,6 @@
+@import '/src/styles/variables';
+$footer-height: 481px;
+footer {
+    height: $footer-height;
+    background: $purple;
+}

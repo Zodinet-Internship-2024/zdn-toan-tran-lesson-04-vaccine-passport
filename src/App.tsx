@@ -1,18 +1,16 @@
-import { QueryClientProvider, useQueryClient } from '@tanstack/react-query';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import './App.scss';
+import Layout from './components/Layout';
+import Home from './components/home/Home';
+import Result from './components/result/Result';
 
 function App() {
-    const queryClient = useQueryClient();
     return (
-        <QueryClientProvider client={queryClient}>
-            <BrowserRouter>
-                <Routes>
-                    <Route path="/" element={<div>Home</div>} />
-                    <Route path="/test" element={<div>test</div>} />
-                </Routes>
-            </BrowserRouter>
-        </QueryClientProvider>
+        <Routes>
+            <Route path="/" element={<Layout />}>
+                <Route index element={<Home />} />
+            </Route>
+        </Routes>
     );
 }
 

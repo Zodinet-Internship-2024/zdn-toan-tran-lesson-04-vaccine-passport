@@ -1,0 +1,7 @@
+@import '/src/styles/variables';
+
+$header-height: 80px;
+header {
+    height: $header-height;
+    background: $white;
+}
