@@ -1,0 +1,8 @@
+@import '/src/styles/variables';
+
+$min-height: 1100px;
+
+.result-container {
+    min-height: $min-height;
+    background: $secondary-gradient;
+}
