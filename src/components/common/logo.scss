@@ -1,0 +1,19 @@
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    padding-left: 20px;
+    font-weight: 700;
+    font-size: 1.2em;
+    line-height: 1.6rem;
+    max-width: 280px;
+
+    .logo__container {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        img {
+            height: 32px;
+        }
+    }
+}
