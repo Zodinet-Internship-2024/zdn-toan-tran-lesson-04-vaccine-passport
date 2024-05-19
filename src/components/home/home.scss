@@ -1,10 +1,13 @@
 @import '/src/styles/variables';
 @import '/src/styles/mixins';
+@import '/src/styles/responsive';
+
 $min-height: 1200px;
 .home {
     display: grid;
     grid-template-columns: 1fr;
-    min-height: $min-height;
+
+    // min-height: $min-height;
     background: url('../../assets/home-background.png') no-repeat center center/cover fixed;
     color: $blue-ink;
 
@@ -94,6 +97,23 @@ $min-height: 1200px;
         text-align: center;
         img {
             margin: 0px auto;
+        }
+    }
+
+    @include desktop {
+        grid-template-columns: 1fr 1fr;
+        place-content: center;
+        &__banner {
+            height: 100%;
+            margin: auto;
+            order: -1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .vaccine-search {
+            margin: 112px 120px 54px 0px;
         }
     }
 }
