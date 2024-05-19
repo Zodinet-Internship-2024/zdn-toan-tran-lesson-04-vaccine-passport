@@ -1,7 +1,65 @@
 @import '/src/styles/variables';
+@import '/src/styles/mixins';
+@import '/src/styles/responsive';
 
 $header-height: 80px;
 header {
     height: $header-height;
     background: $white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $blue-ink;
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        padding-left: 20px;
+        font-weight: 700;
+        font-size: 1.2em;
+        line-height: 1.6rem;
+        max-width: 280px;
+
+        .logo__container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            img {
+                height: 32px;
+            }
+        }
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        a {
+            font-size: 1.8rem;
+            line-height: 2.4rem;
+            font-weight: 400;
+            text-decoration: none;
+
+            display: none;
+
+            @include desktop {
+                display: block;
+            }
+        }
+
+        a:visited {
+            color: $blue-ink;
+        }
+
+        select {
+            border: 1px solid $mid-grey;
+            padding: 8px;
+            border-radius: 12px;
+
+            option {
+                color: $blue-ink;
+            }
+        }
+    }
 }
