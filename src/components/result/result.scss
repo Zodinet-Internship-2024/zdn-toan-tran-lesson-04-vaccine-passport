@@ -3,6 +3,89 @@
 $min-height: 1100px;
 
 .result-container {
+    position: relative;
     min-height: $min-height;
     background: $secondary-gradient;
+    display: flex;
+    justify-content: center;
+    padding-top: 123px;
+    color: #343e58;
+    .result__protection {
+        width: 132px;
+        height: 132px;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $white;
+        border-radius: 50%;
+        top: 56px;
+    }
+    .panel {
+        background-color: $white;
+        border-radius: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: fit-content;
+        padding-bottom: 24px;
+
+        &__img {
+            display: flex;
+            justify-content: center;
+            padding-top: 73px;
+            margin-bottom: 24px;
+
+            img {
+                width: 256px;
+                height: 256px;
+            }
+        }
+        span {
+            font-weight: 500;
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+        }
+
+        &__infos {
+            margin: 16px 8px;
+            background-color: #f4f4f6;
+            padding: 16px 8px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+
+            .panel__info {
+                display: flex;
+                justify-content: space-between;
+                gap: 40px;
+
+                span {
+                    display: inline-block;
+                    text-wrap: wrap;
+                    width: 140px;
+                    color: #babac4;
+                }
+
+                .panel__result {
+                    text-align: right;
+                    color: #343e58;
+                }
+            }
+        }
+
+        &__features {
+            display: flex;
+            gap: 52px;
+
+            .panel__feature {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+
+                color: $blue-ink;
+            }
+        }
+    }
 }
