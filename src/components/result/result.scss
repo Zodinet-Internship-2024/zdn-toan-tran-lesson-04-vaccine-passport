@@ -1,15 +1,17 @@
 @import '/src/styles/variables';
 @import '/src/styles/responsive';
+@import '/src/styles/mixins';
 
 $min-height: 1100px;
 
 .result-container {
     position: relative;
-    min-height: $min-height;
+    // min-height: $min-height;
     background: $secondary-gradient;
     display: flex;
     justify-content: center;
     padding-top: 123px;
+    padding-bottom: 158px;
     color: #343e58;
     .result__protection {
         width: 132px;
@@ -96,6 +98,24 @@ $min-height: 1100px;
 
                 color: $blue-ink;
             }
+        }
+    }
+    .not-found-panel {
+        padding: 80px 45px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        p {
+            font-weight: 700;
+            font-size: 2.4rem;
+            line-height: 2.8rem;
+            text-align: center;
+        }
+
+        button {
+            @include primary-button;
+            width: 100%;
         }
     }
 }
